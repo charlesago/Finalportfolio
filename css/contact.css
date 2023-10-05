@@ -1,0 +1,249 @@
+body{
+    background: linear-gradient(rgba(18, 0, 64, 1),rgba(206, 109, 229, 1));
+}
+
+.pageContact{
+    height: 80vh;
+
+
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+a:hover {
+    opacity: 0.7;
+}
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    height: 8vh;
+    font-size: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+
+}
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+
+}
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    position: relative;
+
+}
+
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    max-width: 600px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.form-control,
+textarea {
+    max-width: 600px;
+    background-color: transparent;
+    color: #fff;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    background-color: #23232e;
+    border: black;
+}
+
+
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+.divGifs{
+    display: contents;
+
+}
+.Gifs{
+    width: 40%;
+    height: 40%;
+    margin-top: 4%;
+    border-radius: 16px;
+}
+.ContactFormGif{
+    justify-content: space-between;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 40vh;
+    width: 100vw;
+    margin-top: 17%;
+}
+
+.gaucheFooter,.milieuFooter,.droiteFooter{
+    width: 33%;
+    height: 100%;
+}
+
+
+
+
+.gaucheFooter{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2.5vh;
+    font-family: Poppins, sans-serif;
+    border-right: rgba(228, 217, 196, 1) 1px solid;
+}
+
+.milieuFooter{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.droiteFooter{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-left: rgba(228, 217, 196, 1) 1px solid;
+
+}
+
+.logoFooter{
+
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.liensFooter{
+    font-family: Poppins, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 12%;
+}
+
+.lienFooter{
+    margin: 2vh;
+    color: white;
+    font-size: 2vh;
+}
+@media(max-width: 753px){
+
+    .direct-contact-container, .form-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+    .form-control, textarea {
+
+        margin: 0 auto;
+    }
+    .wrapper{
+        max-width: 700px;
+    }
+    .wrapper .card{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    .footer{
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .gaucheFooter,.milieuFooter,.droiteFooter{
+        width: 100%;
+        height: 33%;
+    }
+
+    .gaucheFooter{
+        border-bottom: rgba(228, 217, 196, 1) 1px solid;
+        border-right: none;
+    }
+
+    .droiteFooter{
+        border-top: rgba(228, 217, 196, 1) 1px solid;
+        border-left: none;
+    }
+
+
+
+    .send-button{
+        width: 90vw;
+        text-align: center;
+        border: black;
+    }
+    .divGifs{
+        display: none;
+    }
+}
+

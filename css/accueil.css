@@ -1,0 +1,491 @@
+body{
+    background: linear-gradient(rgba(18, 0, 64, 1),rgba(206, 109, 229, 1));
+}
+
+.pageAccueil{
+    height: 100vh;
+    background-image: url("../img/pexels-oleg-gamulinskii-3163534-1920x1080-30fps.gif");
+
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+a:hover {
+    opacity: 0.7;
+}
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    height: 8vh;
+    font-size: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+
+}
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+
+}
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+.nav-list.active {
+    transform: translateX(0);
+}
+.ContainerPerso{
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+.divPresPerso{
+    height: 80vh;
+    width: 160vh;
+    align-text: center;
+    display: flex;
+    background: #23232e;
+    border-radius: 40px;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
+}
+.ImgCharles{
+    display: flex;
+    height: 50vh;
+    border-radius: 40px;
+    border: 2px solid black;
+}
+.imgText{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.NomPrenom{
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+
+    font-size: 30px;
+    font-family: "Academy Engraved LET";
+}
+.Text-animate{
+    font-size: 5rem;
+}
+
+.textDev{
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+
+    font-size: 40px;
+    font-family: Palatino;
+}
+.pageAcceuilPres{
+    height: 80vh;
+    width: 160vh;
+    align-text: center;
+    display: flex;
+    background: #23232e;
+    position: absolute;
+    top: -100px;
+    border-radius: 40px;
+}
+.containerPagePres{
+    position: relative;
+}
+.wrapper{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .card{
+
+    width: calc(33% - 20px);
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+    background-color: transparent;
+
+
+}
+.button{
+    background: linear-gradient(rgb(79, 9, 255),rgba(206, 109, 229, 1));
+    width: 20%;
+
+}
+.wrapper .card .circle{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    cursor: default;
+}
+.card .circle .box,
+.card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.card .circle .box{
+    height: 100%;
+    width: 100%;
+
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: all 0.2s;
+}
+.card .circle:hover .box{
+    transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text{
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.circle .box span{
+    font-size: 38px;
+    font-family: sans-serif;
+    font-weight: 600;
+    transform: translate(-45%, -45%);
+    transition: all 0.1s;
+}
+.card .circle:hover .box span{
+    transform: translate(-45%, -45%) scale(1.09);
+}
+.card .text{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.divProjets{
+    height: 120vh;
+    width: 100vw;
+    background-color: #23232e;
+margin-top: 60%;
+}
+
+.ContainerText{
+    padding-top: 3%;
+}
+.DivCaroussel{
+    justify-content: space-around;
+    text-align: center;
+}
+.imgCarroussel{
+    width: 40%;
+
+}
+.divContact{
+    height: 120vh;
+}
+section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    position: relative;
+
+}
+
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    max-width: 600px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.form-control,
+textarea {
+    max-width: 600px;
+    background-color: transparent;
+    color: #fff;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    background-color: #23232e;
+    border: black;
+}
+
+
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+
+.divGifs{
+    display: contents;
+
+}
+.Gifs{
+    width: 40%;
+    height: 40%;
+ margin-top: 4%;
+    border-radius: 16px;
+}
+.ContactFormGif{
+    justify-content: space-between;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 40vh;
+    width: 100vw;
+    margin-top: 17%;
+}
+
+.gaucheFooter,.milieuFooter,.droiteFooter{
+    width: 33%;
+    height: 100%;
+}
+
+
+
+
+.gaucheFooter{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2.5vh;
+    font-family: Poppins, sans-serif;
+    border-right: rgba(228, 217, 196, 1) 1px solid;
+}
+
+.milieuFooter{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.droiteFooter{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-left: rgba(228, 217, 196, 1) 1px solid;
+
+}
+
+.logoFooter{
+
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.liensFooter{
+    font-family: Poppins, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 12%;
+}
+
+.lienFooter{
+    margin: 2vh;
+    color: white;
+    font-size: 2vh;
+}
+@media(max-width: 753px){
+
+    .direct-contact-container, .form-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+    .form-control, textarea {
+
+        margin: 0 auto;
+    }
+    .wrapper{
+        max-width: 700px;
+    }
+    .wrapper .card{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+    .footer{
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .gaucheFooter,.milieuFooter,.droiteFooter{
+        width: 100%;
+        height: 33%;
+    }
+
+    .gaucheFooter{
+        border-bottom: rgba(228, 217, 196, 1) 1px solid;
+        border-right: none;
+    }
+
+    .droiteFooter{
+        border-top: rgba(228, 217, 196, 1) 1px solid;
+        border-left: none;
+    }
+    .divProjets{
+        height: 90vh;
+        width: 100vw;
+        background-color: #23232e;
+
+        margin-top: 350%;
+    }
+    .pageAcceuilPres{
+        width: 100vw;
+        height: 160vh;
+    }
+    .pageAccueil{
+        width: 100vw;
+        height: 100vh;
+    }
+    .divPresPerso{
+        width: 100vw;
+        height: 200vh;
+        justify-content: center;
+        flex-direction: column;
+
+
+}
+    .textTitre{
+        margin-top: -80%;
+        margin-bottom: 20%;
+    }
+    .imgText{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .send-button{
+        width: 90vw;
+        text-align: center;
+        border: black;
+    }
+    .divGifs{
+        display: none;
+    }
+}
+@media(max-width: 505px){
+    .wrapper{
+        max-width: 500px;
+    }
+    .wrapper .card{
+        width: 100%;
+    }
+    .mobileNav{
+        margin-top: -10px;
+    }
+}
