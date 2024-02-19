@@ -196,6 +196,11 @@ nav {
     width: 20%;
 
 }
+.skills{
+    width: 130vh;
+    height: 56vh;
+    margin-left: 8%;
+}
 .wrapper .card .circle{
     position: relative;
     height: 150px;
